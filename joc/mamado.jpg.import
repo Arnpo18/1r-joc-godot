@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/png-clipart-silver-the-hedgehog-rendering-texture-mapping-kirby-animals-heart-thumbnail.png-9493cc3a53526ff44b855b05c60ca5cb.stex"
+path="res://.import/mamado.jpg-8956851e2cd3c6edbb415a12dcf77570.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png-clipart-silver-the-hedgehog-rendering-texture-mapping-kirby-animals-heart-thumbnail.png"
-dest_files=[ "res://.import/png-clipart-silver-the-hedgehog-rendering-texture-mapping-kirby-animals-heart-thumbnail.png-9493cc3a53526ff44b855b05c60ca5cb.stex" ]
+source_file="res://mamado.jpg"
+dest_files=[ "res://.import/mamado.jpg-8956851e2cd3c6edbb415a12dcf77570.stex" ]
 
 [params]
 
