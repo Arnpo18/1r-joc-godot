@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://png-clipart-silver-the-hedgehog-rendering-texture-mapping-kirby-animals-heart-thumbnail.png" type="Texture" id=1]
+[ext_resource path="res://sprite1_code.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://CollisionPolygon2D.gd" type="Script" id=4]
+
+[sub_resource type="ExternalTexture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 553.234, 179.001 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 1 )
+normal_map = SubResource( 1 )
+offset = Vector2( 25.3452, 52.7789 )
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite"]
+scale = Vector2( 1, 1 )
+polygon = PoolVector2Array( 174, 174, -174, 174, -174, -174, 174, -174 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 294.314, 479.311 )
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2"]
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32, 31, -32 )
+script = ExtResource( 4 )
