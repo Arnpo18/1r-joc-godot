@@ -1,28 +1,53 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://kirby.png" type="Texture" id=1]
-[ext_resource path="res://sprite1_code.gd" type="Script" id=2]
-[ext_resource path="res://KinematicBody2D.gd" type="Script" id=3]
-
-[sub_resource type="ExternalTexture" id=1]
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8.15318, 10 )
+[ext_resource path="res://personatge.tscn" type="PackedScene" id=1]
+[ext_resource path="res://imatges/texture_10.png" type="Texture" id=2]
+[ext_resource path="res://terra.tscn" type="PackedScene" id=4]
+[ext_resource path="res://pilopta.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-script = ExtResource( 3 )
+[node name="personatge" parent="." instance=ExtResource( 1 )]
+position = Vector2( 26.6633, 916.19 )
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 127.375, 56.4563 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 1 )
-normal_map = SubResource( 1 )
-offset = Vector2( 0.204849, 3.04214 )
-script = ExtResource( 2 )
+[node name="pilota" parent="." instance=ExtResource( 5 )]
+position = Vector2( 845.279, 894.174 )
+scale = Vector2( 0.862569, 0.213894 )
+mass = 1.0
+gravity_scale = 3.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 126.975, 56.7605 )
-scale = Vector2( 2.1, 1.8 )
-shape = SubResource( 2 )
+[node name="rampa" type="StaticBody2D" parent="."]
+position = Vector2( -189.696, 150.41 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="rampa"]
+texture = ExtResource( 2 )
+polygon = PoolVector2Array( 370.657, 786.837, 688.137, 656.67, 688.137, 786.837 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="rampa"]
+polygon = PoolVector2Array( 688.239, 657.298, 689.702, 790.954, 361.605, 790.6 )
+
+[node name="terra flotant" type="StaticBody2D" parent="."]
+position = Vector2( -277.064, 197.492 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="terra flotant"]
+position = Vector2( 0, -0.264893 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 934.773, 586.699, 1107.31, 586.699, 1134.82, 573.726, 908.091, 573.56 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant"]
+polygon = PoolVector2Array( 908.016, 573.087, 934.423, 586.384, 1107.67, 586.572, 1134.45, 573.461 )
+
+[node name="terra" parent="." instance=ExtResource( 4 )]
+position = Vector2( 683.216, -87.9064 )
+
+[node name="terra2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1501.43, -87.9061 )
+
+[node name="terra3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2316.64, -87.906 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2.jpg-9963507e2912f114386d8b2e187ce964.stex"
+path="res://.import/1-Carrer-Balmes.jpg-7afff965609ff6ff697c55fbfc1103d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2.jpg"
-dest_files=[ "res://.import/2.jpg-9963507e2912f114386d8b2e187ce964.stex" ]
+source_file="res://imatges/1-Carrer-Balmes.jpg"
+dest_files=[ "res://.import/1-Carrer-Balmes.jpg-7afff965609ff6ff697c55fbfc1103d5.stex" ]
 
 [params]
 

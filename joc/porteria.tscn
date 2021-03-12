@@ -1,0 +1,16 @@
+[gd_scene format=2]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PoolVector2Array( 148.813, 237.191, 148.813, 527.191, 168.813, 527.191, 168.813, 237.191 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2( 280, -22 )
+polygon = PoolVector2Array( 145.411, 243.06, 152.085, 560.752, 173.442, 559.417, 166.768, 241.725 )
+
+[node name="travesser" type="Polygon2D" parent="."]
+polygon = PoolVector2Array( 146.429, 235.743, 149.099, 254.431, 445.433, 250.426, 444.098, 221.06 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 147.764, 235.743, 169.121, 253.096, 170.456, 258.435, 154.438, 242.417, 425.411, 250.426, 429.415, 537.417, 452.107, 538.752, 445.433, 219.725 )
