@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://personatge.tscn" type="PackedScene" id=1]
-[ext_resource path="res://imatges/texture_10.png" type="Texture" id=2]
+[ext_resource path="res://imatges/a/block_05.png" type="Texture" id=2]
+[ext_resource path="res://imatges/a/ground_04.png" type="Texture" id=3]
 [ext_resource path="res://terra.tscn" type="PackedScene" id=4]
 [ext_resource path="res://pilopta.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="personatge" parent="." instance=ExtResource( 1 )]
-position = Vector2( 26.6633, 916.19 )
+position = Vector2( 24, 944 )
+
+[node name="Camera2D" type="Camera2D" parent="personatge"]
 
 [node name="pilota" parent="." instance=ExtResource( 5 )]
 position = Vector2( 845.279, 894.174 )
@@ -17,37 +20,544 @@ mass = 1.0
 gravity_scale = 3.0
 
 [node name="rampa" type="StaticBody2D" parent="."]
-position = Vector2( -189.696, 150.41 )
+position = Vector2( 32, 176 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Polygon2D" type="Polygon2D" parent="rampa"]
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 polygon = PoolVector2Array( 370.657, 786.837, 688.137, 656.67, 688.137, 786.837 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="rampa"]
-polygon = PoolVector2Array( 688.239, 657.298, 689.702, 790.954, 361.605, 790.6 )
+polygon = PoolVector2Array( 692.894, 657.322, 689.702, 790.954, 360.73, 793.441 )
 
 [node name="terra flotant" type="StaticBody2D" parent="."]
-position = Vector2( -277.064, 197.492 )
+position = Vector2( 920, 760 )
+
+[node name="Sprite" type="Sprite" parent="terra flotant"]
+position = Vector2( 8, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="terra flotant"]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant"]
+polygon = PoolVector2Array( -10.9093, -18.5138, -11.1453, 19.2411, 67.4323, 19.4771, 66.9603, -19.2217 )
+
+[node name="terra flotant2" type="StaticBody2D" parent="."]
+position = Vector2( 1117.41, 711.242 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Polygon2D" type="Polygon2D" parent="terra flotant"]
-position = Vector2( 0, -0.264893 )
-color = Color( 0, 0, 0, 1 )
-polygon = PoolVector2Array( 934.773, 586.699, 1107.31, 586.699, 1134.82, 573.726, 908.091, 573.56 )
+[node name="Sprite" type="Sprite" parent="terra flotant2"]
+position = Vector2( 8, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant"]
-polygon = PoolVector2Array( 908.016, 573.087, 934.423, 586.384, 1107.67, 586.572, 1134.45, 573.461 )
+[node name="Sprite2" type="Sprite" parent="terra flotant2"]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant2"]
+polygon = PoolVector2Array( -10.9093, -18.5138, -11.1453, 19.2411, 67.4323, 19.4771, 66.9603, -19.2217 )
+
+[node name="terra flotant3" type="StaticBody2D" parent="."]
+position = Vector2( 831.999, 582.808 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="terra flotant3"]
+position = Vector2( 8, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="terra flotant3"]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant3"]
+polygon = PoolVector2Array( -10.9093, -18.5138, -11.1453, 19.2411, 67.4323, 19.4771, 66.9603, -19.2217 )
+
+[node name="terra flotant4" type="StaticBody2D" parent="."]
+position = Vector2( 601.293, 513.834 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="terra flotant4"]
+position = Vector2( 8, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="terra flotant4"]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant4"]
+polygon = PoolVector2Array( -10.9093, -18.5138, -11.1453, 19.2411, 67.4323, 19.4771, 66.9603, -19.2217 )
+
+[node name="terra flotant5" type="StaticBody2D" parent="."]
+position = Vector2( 431.396, 585.569 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="terra flotant5"]
+position = Vector2( 8, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="terra flotant5"]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant5"]
+polygon = PoolVector2Array( -10.9093, -18.5138, -11.1453, 19.2411, 67.4323, 19.4771, 66.9603, -19.2217 )
+
+[node name="terra flotant6" type="StaticBody2D" parent="."]
+position = Vector2( 267.161, 491.181 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="terra flotant6"]
+position = Vector2( 8, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="terra flotant6"]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant6"]
+polygon = PoolVector2Array( -10.9093, -18.5138, -11.1453, 19.2411, 67.4323, 19.4771, 66.9603, -19.2217 )
+
+[node name="terra flotant7" type="StaticBody2D" parent="."]
+position = Vector2( 489.916, 330.723 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="terra flotant7"]
+position = Vector2( 8, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="terra flotant7"]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant7"]
+polygon = PoolVector2Array( -10.9093, -18.5138, -11.1453, 19.2411, 67.4323, 19.4771, 66.9603, -19.2217 )
+
+[node name="terra flotant8" type="StaticBody2D" parent="."]
+position = Vector2( 742.874, 247.662 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="terra flotant8"]
+position = Vector2( 8, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="terra flotant8"]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant8"]
+polygon = PoolVector2Array( -10.9093, -18.5138, -11.1453, 19.2411, 67.4323, 19.4771, 66.9603, -19.2217 )
+
+[node name="terra flotant9" type="StaticBody2D" parent="."]
+position = Vector2( 1050.58, 257.1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="terra flotant9"]
+position = Vector2( 8, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="terra flotant9"]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant9"]
+polygon = PoolVector2Array( -10.9093, -18.5138, -11.1453, 19.2411, 67.4323, 19.4771, 66.9603, -19.2217 )
+
+[node name="terra flotant10" type="StaticBody2D" parent="."]
+position = Vector2( 1314.86, 317.508 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="terra flotant10"]
+position = Vector2( 8, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="terra flotant10"]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant10"]
+polygon = PoolVector2Array( -10.9093, -18.5138, -11.1453, 19.2411, 67.4323, 19.4771, 66.9603, -19.2217 )
+
+[node name="terra flotant11" type="StaticBody2D" parent="."]
+position = Vector2( 1652.77, 583.681 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="terra flotant11"]
+position = Vector2( 8, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="terra flotant11"]
+position = Vector2( 48, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="terra flotant11"]
+position = Vector2( 87.1995, -0.445435 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terra flotant11"]
+position = Vector2( 0, 0.445435 )
+polygon = PoolVector2Array( -10.9093, -18.5138, -11.1453, 19.2411, 107.194, 19.0471, 105.412, -18.3706 )
+
+[node name="Polygon2D" type="Polygon2D" parent="terra flotant11"]
+color = Color( 0.164706, 0.156863, 0.156863, 1 )
+polygon = PoolVector2Array( 68.2314, -18.681, 68.5192, -178.417, 80.1008, -178.417, 81.8827, -19.8368 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="terra flotant11"]
+polygon = PoolVector2Array( 80.1008, -177.526, 124.646, -152.581, 81.8827, -128.526 )
 
 [node name="terra" parent="." instance=ExtResource( 4 )]
-position = Vector2( 683.216, -87.9064 )
+position = Vector2( 264, -456 )
 
-[node name="terra2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1501.43, -87.9061 )
+[node name="terra2" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 8, 0 )
+scale = Vector2( 1, 1 )
 
-[node name="terra3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2316.64, -87.906 )
+[node name="terra3" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 16, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra32" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -8, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra33" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -16, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra34" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -23, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra35" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -23, -8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra36" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -23, -16 )
+scale = Vector2( 1, 1 )
+
+[node name="terra37" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -23, -24 )
+scale = Vector2( 1, 1 )
+
+[node name="terra38" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -23, -32 )
+scale = Vector2( 1, 1 )
+
+[node name="terra39" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -23, -39 )
+scale = Vector2( 1, 1 )
+
+[node name="terra40" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -23, -47 )
+scale = Vector2( 1, 1 )
+
+[node name="terra41" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -23, -55 )
+scale = Vector2( 1, 1 )
+
+[node name="terra42" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -23, -62 )
+scale = Vector2( 1, 1 )
+
+[node name="terra43" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -23, -69 )
+scale = Vector2( 1, 1 )
+
+[node name="terra44" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -23, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra45" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -16, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra46" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -8, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra48" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( -8, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra47" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 0, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra49" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 8, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra50" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 16, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra51" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 24, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra52" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 32, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra53" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 40, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra54" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 48, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra55" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 56, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra56" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 64, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra57" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 72, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra58" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 80, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra59" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 88, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra60" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 96, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra61" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 104, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra62" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 112, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra63" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 120, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra64" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 128, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra65" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 136, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra66" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 144, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra67" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 152, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra68" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 160, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra69" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 168, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra70" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 176, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra71" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 184, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra72" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 192, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra73" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 200, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra74" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 208, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra75" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 216, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra76" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 224, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra77" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 231.941, 7.82303 )
+scale = Vector2( 1, 1 )
+
+[node name="terra78" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 240, 8 )
+scale = Vector2( 1, 1 )
+
+[node name="terra4" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 24, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra5" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 32, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra6" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 40, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra7" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 48, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra8" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 56, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra9" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 64, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra10" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 72, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra11" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 80, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra12" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 88, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra13" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra14" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 104, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra15" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 112, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra16" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 120, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra17" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 128, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra18" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 136, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra19" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 144, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra20" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 152, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra21" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 160, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra22" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 168, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra23" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 176, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra24" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 184, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra25" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 192, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra26" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 200, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra27" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 208, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra28" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 216.066, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra29" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 224, 0.0243225 )
+scale = Vector2( 1, 1 )
+
+[node name="terra30" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 232, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra31" parent="terra" instance=ExtResource( 4 )]
+position = Vector2( 240, 0 )
+scale = Vector2( 1, 1 )

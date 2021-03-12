@@ -1,22 +1,24 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://imatges/texture_08.png" type="Texture" id=1]
+[ext_resource path="res://imatges/a/ground_01.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 4 )
 
 [node name="terra" type="StaticBody2D"]
 light_mask = 17
-position = Vector2( -1083.33, 185.307 )
+position = Vector2( 1477.97, -969.01 )
 scale = Vector2( 8, 8 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -34.2793, 178.786 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 1 )
+position = Vector2( -28.7464, 181.142 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
 normal_map = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 2.28406, 10.2406, 1019.43, 1011.42 )
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -85.2263, 128.488, -85.2084, 229.087, 16.5416, 229.462, 16.8056, 128.238 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -28.7464, 181.126 )
+shape = SubResource( 1 )
