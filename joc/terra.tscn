@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://imatges/texture_08.png" type="Texture" id=1]
 [ext_resource path="res://imatges/a/ground_01.png" type="Texture" id=2]
+[ext_resource path="res://imatges/a/ground_05.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4, 4 )
+extents = Vector2( 16, 24 )
 
 [node name="terra" type="StaticBody2D"]
 light_mask = 17
@@ -12,13 +13,186 @@ position = Vector2( 1477.97, -969.01 )
 scale = Vector2( 8, 8 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -28.7464, 181.142 )
+position = Vector2( -28.7463, 181.126 )
 scale = Vector2( 0.126984, 0.123558 )
 texture = ExtResource( 2 )
 normal_map = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
 
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( -28.7462, 189.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( -28.7462, 197.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( -20.7462, 181.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( -20.7462, 189.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( -20.7462, 197.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( -12.7462, 181.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( -12.7462, 189.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( -12.7462, 197.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite11" type="Sprite" parent="."]
+position = Vector2( -4.74622, 181.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( -4.74622, 189.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite13" type="Sprite" parent="."]
+position = Vector2( -4.74622, 197.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite14" type="Sprite" parent="."]
+position = Vector2( -4.74622, 205.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite15" type="Sprite" parent="."]
+position = Vector2( -4.74622, 213.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite16" type="Sprite" parent="."]
+position = Vector2( -12.7462, 213.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite17" type="Sprite" parent="."]
+position = Vector2( -20.7462, 213.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite18" type="Sprite" parent="."]
+position = Vector2( -28.7462, 213.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite19" type="Sprite" parent="."]
+position = Vector2( -28.7462, 205.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite20" type="Sprite" parent="."]
+position = Vector2( -20.7462, 205.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite21" type="Sprite" parent="."]
+position = Vector2( -12.7462, 205.126 )
+scale = Vector2( 0.126984, 0.123558 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.461441, -0.478987, 63.8184, 65.1387 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -28.7462, 173.126 )
+scale = Vector2( 0.127, 0.124 )
+texture = ExtResource( 3 )
+
+[node name="Sprite22" type="Sprite" parent="."]
+position = Vector2( -20.7462, 173.126 )
+scale = Vector2( 0.127, 0.124 )
+texture = ExtResource( 3 )
+
+[node name="Sprite23" type="Sprite" parent="."]
+position = Vector2( -12.7462, 173.126 )
+scale = Vector2( 0.127, 0.124 )
+texture = ExtResource( 3 )
+
+[node name="Sprite24" type="Sprite" parent="."]
+position = Vector2( -4.74622, 173.126 )
+scale = Vector2( 0.127, 0.124 )
+texture = ExtResource( 3 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -28.7464, 181.126 )
+visible = false
+position = Vector2( -16.7462, 193.126 )
 shape = SubResource( 1 )

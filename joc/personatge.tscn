@@ -1,25 +1,47 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://sprite1_code.gd" type="Script" id=2]
+[ext_resource path="res://imatges/a/player_13.png" type="Texture" id=2]
 [ext_resource path="res://imatges/a/player_11.png" type="Texture" id=3]
-
-[sub_resource type="ExternalTexture" id=1]
+[ext_resource path="res://imatges/a/player_12.png" type="Texture" id=4]
+[ext_resource path="res://imatges/a/player_16.png" type="Texture" id=5]
+[ext_resource path="res://imatges/a/player_15.png" type="Texture" id=6]
+[ext_resource path="res://imatges/a/player_14.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 5.88935, 11.1652 )
+extents = Vector2( 7.31995, 14.2407 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "esquerra",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "dreta",
+"speed": 5.0
+} ]
 
 [node name="personatge" type="KinematicBody2D"]
+position = Vector2( -3.0676, 1.65178 )
 script = ExtResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 4.45953, -4.01357 )
-scale = Vector2( 0.754993, 0.774736 )
-texture = ExtResource( 3 )
-normal_map = SubResource( 1 )
-script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 4.16223, -4.75683 )
 scale = Vector2( 2.93, 1.8 )
 shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 2.12372, -5.42728 )
+frames = SubResource( 3 )
+animation = "esquerra"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 9.20277, -5.42728 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
