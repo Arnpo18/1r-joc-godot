@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://terra.tscn" type="PackedScene" id=1]
+[ext_resource path="res://personatge.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="terra" parent="." instance=ExtResource( 1 )]
+position = Vector2( 264, -648 )
+
+[node name="terra2" parent="terra" instance=ExtResource( 1 )]
+position = Vector2( 96, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra3" parent="terra" instance=ExtResource( 1 )]
+position = Vector2( 192, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra4" parent="terra" instance=ExtResource( 1 )]
+position = Vector2( 288, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra7" parent="terra" instance=ExtResource( 1 )]
+position = Vector2( 382, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra5" parent="terra" instance=ExtResource( 1 )]
+position = Vector2( -96, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="terra6" parent="terra" instance=ExtResource( 1 )]
+position = Vector2( -192, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="personatge" parent="." instance=ExtResource( 2 )]
