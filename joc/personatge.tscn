@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_011.png" type="Texture" id=2]
@@ -40,36 +40,51 @@
 [ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_011.png" type="Texture" id=38]
 [ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_009.png" type="Texture" id=39]
 [ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_014.png" type="Texture" id=40]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_001.png" type="Texture" id=42]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_009.png" type="Texture" id=43]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_005.png" type="Texture" id=44]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_007.png" type="Texture" id=45]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_010.png" type="Texture" id=46]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_002.png" type="Texture" id=47]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_004.png" type="Texture" id=48]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_006.png" type="Texture" id=49]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_000.png" type="Texture" id=50]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_011.png" type="Texture" id=51]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_008.png" type="Texture" id=52]
+[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_003.png" type="Texture" id=53]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.0971, 25.9216 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 14 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 31 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "New Anim",
-"speed": 5.0
+"name": "caminar",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 42 ), ExtResource( 47 ), ExtResource( 53 ), ExtResource( 48 ), ExtResource( 44 ), ExtResource( 49 ), ExtResource( 45 ), ExtResource( 52 ), ExtResource( 43 ), ExtResource( 46 ), ExtResource( 51 ) ],
+"loop": true,
+"name": "atacar",
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 22 ), ExtResource( 7 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 32 ), ExtResource( 3 ), ExtResource( 25 ), ExtResource( 33 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "quiet",
-"speed": 20.0
+"speed": 12.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 18 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 34 ), ExtResource( 39 ), ExtResource( 35 ), ExtResource( 38 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 40 ) ],
 "loop": true,
 "name": "mort",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 14 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 31 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "caminar",
-"speed": 12.0
 } ]
 
 [node name="personatge" type="KinematicBody2D"]
 position = Vector2( -3.0676, 1.65178 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 6.99377, -13.2517 )
@@ -77,9 +92,16 @@ scale = Vector2( 2.93, 1.8 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 9.67468, -6.37113 )
+position = Vector2( 12.2002, -5.52928 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 2 )
 animation = "quiet"
-frame = 2
+frame = 10
+speed_scale = 2.0
 playing = true
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 56.9707, -1.47157 )
+__meta__ = {
+"_editor_description_": ""
+}

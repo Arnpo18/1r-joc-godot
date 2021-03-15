@@ -26,6 +26,5 @@ region_enabled = true
 region_rect = Rect2( 128, 167, 48, 41 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
 position = Vector2( 120, 48 )
 polygon = PoolVector2Array( 0, 64, 0, 120, 248, 120, 248, 64 )
