@@ -83,6 +83,13 @@ atacar={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="jugador i enemic"
+2d_physics/layer_2="terra i parets"
+2d_physics/layer_3="enemics"
+2d_physics/layer_4="projectils"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

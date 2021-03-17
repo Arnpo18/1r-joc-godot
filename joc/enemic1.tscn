@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://imatges/minotaur/Minotaur_02/PNG Sequences/Attacking/Minotaur_02_Attacking_005.png" type="Texture" id=1]
 [ext_resource path="res://imatges/minotaur/Minotaur_02/PNG Sequences/Attacking/Minotaur_02_Attacking_007.png" type="Texture" id=2]
@@ -88,14 +88,19 @@ extents = Vector2( 118.34, 229.087 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 81.4378, 187.891 )
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 160, 200 )
+
 [node name="KinematicBody2D" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 11
 script = ExtResource( 58 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -12.253, -10.4875 )
 frames = SubResource( 1 )
 animation = "caminar"
-frame = 3
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -103,13 +108,26 @@ position = Vector2( -19.2641, -22.0164 )
 shape = SubResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 225.588, 30.7013 )
+position = Vector2( 200, 24 )
 shape = SubResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( 85.4982, 7.78242 )
 scale = Vector2( 4, 4 )
 enabled = true
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( -272, 40 )
+collision_layer = 32
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+modulate = Color( 0.317647, 0.152941, 0.152941, 1 )
+light_mask = 32
+position = Vector2( 264, -64 )
+shape = SubResource( 4 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]

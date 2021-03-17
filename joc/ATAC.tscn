@@ -4,6 +4,8 @@
 [ext_resource path="res://ATAC.gd" type="Script" id=2]
 
 [node name="atac" type="Area2D"]
+collision_layer = 8
+collision_mask = 4
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -12,7 +14,6 @@ scale = Vector2( 0.651992, 0.58239 )
 texture = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
 position = Vector2( -51.4158, -2.20557 )
 polygon = PoolVector2Array( 51.1763, -12.8016, 43.4975, -11.3033, 40.3136, -8.68129, 38.2534, -4.74823, 37.317, 0.121265, 36.9424, 6.48907, 39.939, 11.5459, 43.3102, 14.5425, 52.3, 16.2281, 56.6077, 13.4187, 63.35, 9.67297, 66.9085, 1.99415, 64.8483, -2.87535, 61.8517, -7.18298, 57.5441, -10.5542 )
 

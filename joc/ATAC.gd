@@ -2,6 +2,7 @@ extends Area2D
 export var vel = 500
 var mov = Vector2()
 var direccio = 1
+export var mal=50
 func _ready():
 	pass
 func direccio_atac(dir):

@@ -1,507 +1,61 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://personatge.tscn" type="PackedScene" id=1]
-[ext_resource path="res://terra2.tscn" type="PackedScene" id=2]
-[ext_resource path="res://imatges/Sprites/Tilemaps/ChurchStage/ChurchTileset.png" type="Texture" id=3]
-[ext_resource path="res://terra.tscn" type="PackedScene" id=4]
+[ext_resource path="res://mapa.tscn" type="PackedScene" id=2]
+[ext_resource path="res://imatges/BackgroundExample.png" type="Texture" id=3]
 [ext_resource path="res://enemic1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Camera2D.gd" type="Script" id=6]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="terra2" parent="." instance=ExtResource( 4 )]
-position = Vector2( -336, 608 )
-scale = Vector2( 1.8, 1.8 )
-
-[node name="StaticBody2D3" parent="terra2" instance=ExtResource( 4 )]
-position = Vector2( 248.889, 3.05176e-05 )
-
-[node name="StaticBody2D11" parent="terra2" instance=ExtResource( 4 )]
-position = Vector2( 275.556, 0 )
-
-[node name="StaticBody2D" parent="terra2" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 151.111, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D2" parent="terra2" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 213.333, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D4" parent="terra2" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 275.556, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D5" parent="terra2" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 337.778, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D6" parent="terra2" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 391.111, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D7" parent="terra2" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 453.333, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D8" parent="terra2" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 515.555, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D9" parent="terra2" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 577.778, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D10" parent="terra2" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 586.667, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D12" parent="terra2" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 613.333, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="terra1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 608, 608 )
-scale = Vector2( 1.8, 1.8 )
-
-[node name="StaticBody2D3" parent="terra1" instance=ExtResource( 4 )]
-position = Vector2( 248.889, 3.05176e-05 )
-
-[node name="StaticBody2D11" parent="terra1" instance=ExtResource( 4 )]
-position = Vector2( 275.556, 0 )
-
-[node name="StaticBody2D" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 151.111, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D2" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 213.333, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D4" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 275.556, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D5" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 337.778, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D6" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 391.111, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D7" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 453.333, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D8" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 515.555, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D13" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 648.889, 182.222 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D14" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 693.333, 155.556 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D16" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 693.333, 155.556 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D15" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 675.556, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D9" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 577.778, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D10" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 586.667, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D12" parent="terra1" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 613.333, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="terra3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1672, 576 )
-scale = Vector2( 1.8, 1.8 )
-
-[node name="StaticBody2D3" parent="terra3" instance=ExtResource( 4 )]
-position = Vector2( 244.444, -3.05176e-05 )
-
-[node name="StaticBody2D11" parent="terra3" instance=ExtResource( 4 )]
-position = Vector2( 275.556, 0 )
-
-[node name="StaticBody2D16" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 151.111, 160 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D18" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 146.667, 204.444 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D2" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 213.333, 182.222 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D14" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 213.333, 200 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D15" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 208.889, 204.444 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D4" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 275.555, 177.778 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D13" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 271.111, 204.444 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D5" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 337.778, 186.667 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D17" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 333.333, 204.444 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D6" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 395.555, 177.778 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D22" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 395.555, 204.444 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D7" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 457.778, 182.222 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D21" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 457.778, 204.444 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D8" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 520, 177.778 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D20" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 520, 204.444 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D9" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 582.222, 182.222 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D10" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 613.333, 173.333 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D12" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 582.222, 204.444 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D23" parent="terra3" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( 613.333, 204.444 )
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D24" parent="terra3" instance=ExtResource( 2 )]
-position = Vector2( 613.333, 102.222 )
-rotation = 3.14159
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D25" parent="terra3" instance=ExtResource( 2 )]
-position = Vector2( 613.333, 44.4445 )
-rotation = 3.14159
-scale = Vector2( 2, 2 )
-
-[node name="StaticBody2D26" parent="terra3" instance=ExtResource( 2 )]
-position = Vector2( 613.333, -17.7778 )
-rotation = 3.14159
-scale = Vector2( 2, 2 )
-
 [node name="personatge" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2112, 704 )
+position = Vector2( 112, 616 )
 
 [node name="Camera2D" type="Camera2D" parent="personatge"]
 script = ExtResource( 6 )
 
-[node name="valles" type="Sprite" parent="."]
-show_behind_parent = true
-position = Vector2( 872, 728 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite3" type="Sprite" parent="valles"]
-show_behind_parent = true
-position = Vector2( 64, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite5" type="Sprite" parent="valles"]
-show_behind_parent = true
-position = Vector2( 260, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite2" type="Sprite" parent="valles"]
-show_behind_parent = true
-position = Vector2( 128, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite4" type="Sprite" parent="valles"]
-show_behind_parent = true
-position = Vector2( 196, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite6" type="Sprite" parent="valles"]
-show_behind_parent = true
-position = Vector2( 324, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite7" type="Sprite" parent="valles"]
-show_behind_parent = true
-position = Vector2( 388, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="valles2" type="Sprite" parent="valles"]
-show_behind_parent = true
-position = Vector2( -452, 0 )
-texture = ExtResource( 3 )
-flip_h = true
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite3" type="Sprite" parent="valles/valles2"]
-show_behind_parent = true
-position = Vector2( 64, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite5" type="Sprite" parent="valles/valles2"]
-show_behind_parent = true
-position = Vector2( 260, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite2" type="Sprite" parent="valles/valles2"]
-show_behind_parent = true
-position = Vector2( 128, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite4" type="Sprite" parent="valles/valles2"]
-show_behind_parent = true
-position = Vector2( 196, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite6" type="Sprite" parent="valles/valles2"]
-show_behind_parent = true
-position = Vector2( 324, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite7" type="Sprite" parent="valles/valles2"]
-show_behind_parent = true
-position = Vector2( 388, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="valles3" type="Sprite" parent="valles"]
-show_behind_parent = true
-position = Vector2( -452, 0 )
-texture = ExtResource( 3 )
-flip_h = true
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite3" type="Sprite" parent="valles/valles3"]
-show_behind_parent = true
-position = Vector2( 64, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite5" type="Sprite" parent="valles/valles3"]
-show_behind_parent = true
-position = Vector2( 260, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite2" type="Sprite" parent="valles/valles3"]
-show_behind_parent = true
-position = Vector2( 128, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite4" type="Sprite" parent="valles/valles3"]
-show_behind_parent = true
-position = Vector2( 196, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite6" type="Sprite" parent="valles/valles3"]
-show_behind_parent = true
-position = Vector2( 324, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="Sprite7" type="Sprite" parent="valles/valles3"]
-show_behind_parent = true
-position = Vector2( 388, 0 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 92, 80, 52 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="Sprite3" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 1808, 824 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 160, 32, 32 )
-
-[node name="Sprite4" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 1800, 800 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 160, 32, 32 )
-
-[node name="Sprite5" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 1800, 816 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 160, 32, 32 )
-
-[node name="Sprite6" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 1800, 832 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 160, 32, 32 )
-
-[node name="Sprite7" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 1800, 848 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 160, 32, 32 )
-
-[node name="Sprite10" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 1864, 776 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 160, 32, 32 )
-
-[node name="Sprite11" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 1864, 792 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 160, 32, 32 )
-
-[node name="Sprite12" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 1864, 808 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 160, 32, 32 )
-
-[node name="Sprite13" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 1864, 824 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 192, 160, 32, 32 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( -0.264893, 0.264893 )
-polygon = PoolVector2Array( 1766.77, 810.157, 1906.09, 762.216, 1896, 880, 1736, 888 )
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( 992, -320 )
-polygon = PoolVector2Array( 1728, 816, 1840, 816, 1832, 1144, 1728, 1136 )
-
-[node name="KinematicBody2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2448, 712 )
+[node name="enemic1" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2472, 408 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="KinematicBody2D2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2776, 408 )
-scale = Vector2( 0.3, 0.3 )
+[node name="MAPA TERRA" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 672 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MAPA TERRA"]
+visible = false
+polygon = PoolVector2Array( -1200, -1248, -1120, 16, 824, 0, 1128, -160, 3408, -160, 3408, 424, -1216, 416 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MAPA TERRA"]
+visible = false
+polygon = PoolVector2Array( 3408, -128, 3424, -128, 3424, -96, 3456, -96, 3456, -64, 3488, -64, 3488, -32, 3520, -32, 3520, 32, 3552, 32, 3552, 64, 3584, 64, 3584, 96, 3616, 96, 3616, 160, 3680, 160, 3680, 192, 3712, 192, 3712, 224, 3776, 224, 3776, 256, 3872, 256, 3872, 288, 4000, 288, 4000, 320, 4032, 320, 4032, 352, 4128, 352, 4128, 384, 4160, 384, 4160, 448, 3408, 424 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="MAPA TERRA"]
+visible = false
+polygon = PoolVector2Array( 4160, 440, 4160, 448, 4192, 448, 4192, 480, 4224, 480, 4224, 512, 4288, 512, 4288, 544, 4352, 544, 4352, 576, 4384, 576, 4384, 608, 4416, 608, 4416, 640, 4448, 640, 4448, 672, 4480, 672, 4072, 800 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="MAPA TERRA"]
+polygon = PoolVector2Array( 4480, 672, 4480, 704, 4576, 704, 4576, 736, 4640, 736, 4640, 768, 4672, 768, 4672, 800, 4736, 800, 4736, 832, 4800, 832, 4800, 864, 5056, 864, 5064, 896, 5080, 896, 5080, 896, 5088, 896, 5088, 928, 5120, 928, 5120, 984, 5120, 992, 5120, 1000, 5120, 992, 5152, 992, 5152, 1048, 4328, 1032, 4376, 672 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="MAPA TERRA"]
+visible = false
+polygon = PoolVector2Array( 3680, -304, 3680, -32, 3744, -32, 3744, 0, 3776, 0, 3776, 72, 3832, 72, 3840, 96, 4160, 104, 4168, 128, 4224, 128, 4224, 160, 4416, 160, 4416, 200, 4456, 224, 4576, 288, 4936, 352, 5008, 208 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="MAPA TERRA"]
+polygon = PoolVector2Array( 5152, 992, 5216, 992, 5216, 1024, 5472, 1024, 5472, 1048, 5472, 1056, 5528, 1056, 5536, 1056, 5536, 1088, 5600, 1088, 5600, 1120, 5824, 1120, 5824, 1152, 6016, 1152, 6016, 1184, 6112, 1184, 6112, 1152, 6368, 1152, 6368, 1120, 6432, 1120, 6432, 1088, 6592, 1088, 6592, 1056, 6880, 1056, 6264, 1592, 5168, 1400 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+follow_viewport_enable = true
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 4520, 1152 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 140, 390, 190 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 6440, 1176 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 320, 380, 180 )
