@@ -3,18 +3,19 @@ var timer
 var cooldown_i = 2
 const velocitat = 100
 var mov = Vector2()
-var hp = 100
 const gravetat=50
 var moviment = Vector2()
 var direccio=1
-var mal = 50
 var mort = false
+var hp = 100
 func _ready():
 	pass
 func mort():
 	mort=true
 	moviment=Vector2(0,0)
 	$AnimatedSprite.play('mort')
+	$CollisionShape2D.disabled==true
+	$Timer.start()
 func _physics_process(delta):
 	if mort==false:
 		moviment.x=velocitat*direccio
@@ -36,6 +37,10 @@ func _physics_process(delta):
 		
 
 
-func _on_Area2D2_body_entered(body):
-	pass
+
+		
 	
+
+
+func _on_Timer_timeout():
+	queue_free() # Replace with function body.

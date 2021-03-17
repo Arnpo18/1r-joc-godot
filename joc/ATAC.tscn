@@ -5,7 +5,7 @@
 
 [node name="atac" type="Area2D"]
 collision_layer = 8
-collision_mask = 4
+collision_mask = 6
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -20,4 +20,6 @@ polygon = PoolVector2Array( 51.1763, -12.8016, 43.4975, -11.3033, 40.3136, -8.68
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 position = Vector2( -0.703373, -0.377459 )
 scale = Vector2( 1.61872, 1.51265 )
+[connection signal="area_entered" from="." to="." method="_on_atac_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_atac_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

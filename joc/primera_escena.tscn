@@ -2,11 +2,43 @@
 
 [ext_resource path="res://personatge.tscn" type="PackedScene" id=1]
 [ext_resource path="res://mapa.tscn" type="PackedScene" id=2]
-[ext_resource path="res://imatges/BackgroundExample.png" type="Texture" id=3]
-[ext_resource path="res://enemic1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://clau.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemic.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Camera2D.gd" type="Script" id=6]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="MAPA TERRA" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 672 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MAPA TERRA"]
+position = Vector2( -1.18921, -1.18921 )
+polygon = PoolVector2Array( -1200, -1248, -1120, 16, 824, 0, 1128, -160, 1796.02, -160.71, 1825.39, -190.076, 1889.19, -190.811, 1889.19, -222.811, 1889.19, -222.811, 1921.38, -221.731, 1953.19, -222.811, 1953.19, -254.811, 2017.19, -254.811, 2017.19, -286.811, 2080.83, -287.263, 2081.17, -319.132, 2145.19, -318.811, 2145.19, -350.811, 2209.19, -350.811, 2209.19, -318.811, 2241.19, -318.811, 2241.19, -286.811, 2273.19, -286.811, 2273.19, -254.811, 2305.19, -254.811, 2305.19, -222.811, 2337.19, -222.811, 2337.19, -190.811, 2401.19, -190.811, 2401.19, -158.811, 2457.19, -158.811, 3408, -160, 3408, 424, -1216, 416 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MAPA TERRA"]
+polygon = PoolVector2Array( 3408, -128, 3424, -128, 3424, -96, 3456, -96, 3456, -64, 3488, -64, 3488, -32, 3520, -32, 3520, 32, 3552, 32, 3552, 64, 3584, 64, 3584, 96, 3616, 96, 3616, 160, 3680, 160, 3680, 192, 3712, 192, 3712, 224, 3776, 224, 3776, 256, 3872, 256, 3872, 288, 4000, 288, 4000, 320, 4032, 320, 4032, 352, 4128, 352, 4128, 384, 4160, 384, 4160, 448, 3408, 424 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="MAPA TERRA"]
+polygon = PoolVector2Array( 4160, 440, 4160, 448, 4192, 448, 4192, 480, 4224, 480, 4224, 512, 4288, 512, 4288, 544, 4352, 544, 4352, 576, 4384, 576, 4384, 608, 4416, 608, 4416, 640, 4448, 640, 4448, 672, 4480, 672, 4072, 800 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="MAPA TERRA"]
+polygon = PoolVector2Array( 4480, 672, 4480, 704, 4576, 704, 4576, 736, 4640, 736, 4640, 768, 4672, 768, 4672, 800, 4736, 800, 4736, 832, 4800, 832, 4800, 864, 5056, 864, 5064, 896, 5080, 896, 5080, 896, 5088, 896, 5088, 928, 5120, 928, 5120, 984, 5120, 992, 5120, 1000, 5120, 992, 5152, 992, 5152, 1048, 4328, 1032, 4376, 672 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="MAPA TERRA"]
+polygon = PoolVector2Array( 3680, -304, 3680, -32, 3744, -32, 3744, 0, 3776, 0, 3776, 72, 3832, 72, 3840, 96, 4160, 104, 4168, 128, 4224, 128, 4224, 160, 4416, 160, 4416, 200, 4456, 224, 4576, 288, 4936, 352, 5008, 208 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="MAPA TERRA"]
+polygon = PoolVector2Array( 5152, 992, 5216, 992, 5216, 1024, 5472, 1024, 5472, 1048, 5472, 1056, 5528, 1056, 5536, 1056, 5536, 1088, 5600, 1088, 5600, 1120, 5824, 1120, 5824, 1152, 6016, 1152, 6016, 1184, 6112, 1184, 6112, 1152, 6368, 1152, 6368, 1120, 6432, 1120, 6432, 1088, 6592, 1088, 6592, 1056, 6880, 1056, 6264, 1592, 5168, 1400 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="MAPA TERRA"]
+polygon = PoolVector2Array( 4901.79, 334.222, 4989.98, 351.861, 4997.54, 389.659, 5327.64, 392.179, 5337.72, 422.417, 5569.55, 422.417, 5559.47, 457.695, 5614.9, 450.135, 5627.5, 482.893, 5761.05, 487.933, 5761.05, 510.611, 5768.61, 518.171, 5778.69, 535.81, 5819.01, 561.008, 5831.61, 573.607, 5859.33, 586.207, 5879.49, 588.727, 5909.72, 588.727, 5934.92, 586.207, 5985.32, 576.127, 6202.74, 368.805, 6384.49, 315.351, 6445.07, 293.97, 6416.56, 65.8997, 6355.98, 30.2637, 6099.4, 33.8273, 5981.8, -165.734, 5906.96, -165.734, 5650.38, 30.2637, 5607.62, 30.2637, 5600.49, -1.80872, 5340.35, -1.80872, 5329.66, 26.7001, 5172.86, 33.8273, 5172.86, 65.8997, 5076.65, 65.8997, 5069.52, 23.1365, 4926.98, 30.2637, 4919.85, -8.93591, 4673.96, -5.37231, 4663.27, -48.1354, 4570.62, -41.0082, 4574.18, -76.6442, 4221.38, -98.0258 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="MAPA TERRA"]
+polygon = PoolVector2Array( 6844.55, 1053.78, 6845.68, 1021.23, 6879.35, 1022.35, 6889.45, 993.17, 6879.25, 1022.5, 6879.75, 992, 6943.75, 992.75, 6944, 959.75, 7168.21, 960.023, 7168.63, 928.069, 7296.02, 928.91, 7296, 895.5, 7359.5, 896, 7360, 864.5, 7392, 864, 7391.5, 831.5, 7488, 832, 7488.5, 799, 7583, 799.5, 7583.53, 767.514, 7679.85, 768.109, 7679.85, 736, 7711.96, 736.595, 7712.56, 703.297, 7777.37, 703.892, 7777.37, 672.378, 7838.61, 672.378, 7839.21, 639.08, 7870.72, 640.269, 7870.72, 608.755, 7934.94, 608.755, 7935.5, 576, 7967.5, 576, 7967.5, 544, 7999, 545, 7999.5, 480, 8031.5, 479.5, 8032, 447.5, 8095, 447, 8095.67, 415.668, 8127.66, 415.668, 8127.94, 351.968, 8159.93, 351.127, 8159.65, 319.136, 8223.63, 319.978, 8223.82, 287.918, 8255.89, 287.918, 8255, 255.846, 8319.59, 255.846, 8320.04, 223.774, 8351.66, 224.664, 8350.77, 160.52, 8384.18, 160.074, 8384.63, 192.147, 8415.36, 192.147, 8415.36, 159.629, 8448.32, 160.074, 8447.61, 127.604, 8479.12, 128.793, 8479.72, 64.5757, 8511.23, 63.9811, 8511.23, 31.8725, 8545.12, 32.4671, 8544.53, -0.236084, 8607.56, 2.14233, 8316.09, 1050.12 )
+
+[node name="clau" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3090.72, 471.314 )
+scale = Vector2( 0.1, 0.1 )
 
 [node name="personatge" parent="." instance=ExtResource( 1 )]
 position = Vector2( 112, 616 )
@@ -14,48 +46,26 @@ position = Vector2( 112, 616 )
 [node name="Camera2D" type="Camera2D" parent="personatge"]
 script = ExtResource( 6 )
 
-[node name="enemic1" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2472, 408 )
+[node name="enemic" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2919.22, 445.334 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="MAPA TERRA" parent="." instance=ExtResource( 2 )]
-position = Vector2( 8, 672 )
+[node name="enemic2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5939.68, 1747.44 )
+scale = Vector2( 0.3, 0.3 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MAPA TERRA"]
-visible = false
-polygon = PoolVector2Array( -1200, -1248, -1120, 16, 824, 0, 1128, -160, 3408, -160, 3408, 424, -1216, 416 )
+[node name="enemic3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4986.01, 1458.1 )
+scale = Vector2( 0.3, 0.3 )
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MAPA TERRA"]
-visible = false
-polygon = PoolVector2Array( 3408, -128, 3424, -128, 3424, -96, 3456, -96, 3456, -64, 3488, -64, 3488, -32, 3520, -32, 3520, 32, 3552, 32, 3552, 64, 3584, 64, 3584, 96, 3616, 96, 3616, 160, 3680, 160, 3680, 192, 3712, 192, 3712, 224, 3776, 224, 3776, 256, 3872, 256, 3872, 288, 4000, 288, 4000, 320, 4032, 320, 4032, 352, 4128, 352, 4128, 384, 4160, 384, 4160, 448, 3408, 424 )
+[node name="enemic4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5376.51, 1626.36 )
+scale = Vector2( 0.3, 0.3 )
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="MAPA TERRA"]
-visible = false
-polygon = PoolVector2Array( 4160, 440, 4160, 448, 4192, 448, 4192, 480, 4224, 480, 4224, 512, 4288, 512, 4288, 544, 4352, 544, 4352, 576, 4384, 576, 4384, 608, 4416, 608, 4416, 640, 4448, 640, 4448, 672, 4480, 672, 4072, 800 )
+[node name="enemic5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6284.51, 1738.53 )
+scale = Vector2( 0.3, 0.3 )
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="MAPA TERRA"]
-polygon = PoolVector2Array( 4480, 672, 4480, 704, 4576, 704, 4576, 736, 4640, 736, 4640, 768, 4672, 768, 4672, 800, 4736, 800, 4736, 832, 4800, 832, 4800, 864, 5056, 864, 5064, 896, 5080, 896, 5080, 896, 5088, 896, 5088, 928, 5120, 928, 5120, 984, 5120, 992, 5120, 1000, 5120, 992, 5152, 992, 5152, 1048, 4328, 1032, 4376, 672 )
-
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="MAPA TERRA"]
-visible = false
-polygon = PoolVector2Array( 3680, -304, 3680, -32, 3744, -32, 3744, 0, 3776, 0, 3776, 72, 3832, 72, 3840, 96, 4160, 104, 4168, 128, 4224, 128, 4224, 160, 4416, 160, 4416, 200, 4456, 224, 4576, 288, 4936, 352, 5008, 208 )
-
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="MAPA TERRA"]
-polygon = PoolVector2Array( 5152, 992, 5216, 992, 5216, 1024, 5472, 1024, 5472, 1048, 5472, 1056, 5528, 1056, 5536, 1056, 5536, 1088, 5600, 1088, 5600, 1120, 5824, 1120, 5824, 1152, 6016, 1152, 6016, 1184, 6112, 1184, 6112, 1152, 6368, 1152, 6368, 1120, 6432, 1120, 6432, 1088, 6592, 1088, 6592, 1056, 6880, 1056, 6264, 1592, 5168, 1400 )
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-follow_viewport_enable = true
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
-position = Vector2( 4520, 1152 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 0, 140, 390, 190 )
-
-[node name="Sprite2" type="Sprite" parent="ParallaxBackground"]
-position = Vector2( 6440, 1176 )
-scale = Vector2( 5, 5 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 0, 320, 380, 180 )
+[node name="enemic6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7086.81, 1555.42 )
+scale = Vector2( 0.3, 0.3 )

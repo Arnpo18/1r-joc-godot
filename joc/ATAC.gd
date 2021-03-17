@@ -2,7 +2,6 @@ extends Area2D
 export var vel = 500
 var mov = Vector2()
 var direccio = 1
-export var mal=50
 func _ready():
 	pass
 func direccio_atac(dir):
@@ -17,4 +16,15 @@ func _process(delta):
 	rotation_degrees += 3
 
 func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
+	
+
+# Replace with function body.
+
+
+func _on_atac_body_entered(body):
+	body.hp -= 50
+	if body.hp <= 0:
+		body.mort()
+		print("si")
 	queue_free()
