@@ -1,6 +1,6 @@
 extends KinematicBody2D
 var timer
-var cooldown_i = 2
+var cooldown_i = 1
 const velocitat = 100
 var mov = Vector2()
 const gravetat=50
@@ -27,12 +27,10 @@ func _physics_process(delta):
 		else:
 			$AnimatedSprite.flip_h=true
 		if is_on_wall():
-			
 			direccio=direccio*-1
 			$RayCast2D.position.x *= -1
 		if $RayCast2D.is_colliding()==false:
-			
-			direccio=direccio*-1
+			direccio*=-1
 			$RayCast2D.position.x *= -1
 		
 

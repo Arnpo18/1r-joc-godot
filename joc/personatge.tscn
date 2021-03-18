@@ -1,90 +1,185 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_011.png" type="Texture" id=2]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_005.png" type="Texture" id=3]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_000.png" type="Texture" id=4]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_009.png" type="Texture" id=5]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_001.png" type="Texture" id=6]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_001.png" type="Texture" id=7]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_003.png" type="Texture" id=8]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_008.png" type="Texture" id=9]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_002.png" type="Texture" id=10]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_011.png" type="Texture" id=11]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_010.png" type="Texture" id=12]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_003.png" type="Texture" id=13]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_002.png" type="Texture" id=14]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_002.png" type="Texture" id=15]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_009.png" type="Texture" id=16]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_000.png" type="Texture" id=17]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_004.png" type="Texture" id=18]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_001.png" type="Texture" id=19]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_005.png" type="Texture" id=20]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_010.png" type="Texture" id=21]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_000.png" type="Texture" id=22]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_004.png" type="Texture" id=23]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_007.png" type="Texture" id=24]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_006.png" type="Texture" id=25]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_005.png" type="Texture" id=26]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_006.png" type="Texture" id=27]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_007.png" type="Texture" id=28]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_006.png" type="Texture" id=29]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_003.png" type="Texture" id=30]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Walking/Wraith_03_Moving Forward_008.png" type="Texture" id=31]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_004.png" type="Texture" id=32]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Idle/Wraith_03_Idle_007.png" type="Texture" id=33]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_008.png" type="Texture" id=34]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_010.png" type="Texture" id=35]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_013.png" type="Texture" id=36]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_012.png" type="Texture" id=37]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_011.png" type="Texture" id=38]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_009.png" type="Texture" id=39]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Dying/Wraith_03_Dying_014.png" type="Texture" id=40]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_001.png" type="Texture" id=42]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_009.png" type="Texture" id=43]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_005.png" type="Texture" id=44]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_007.png" type="Texture" id=45]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_010.png" type="Texture" id=46]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_002.png" type="Texture" id=47]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_004.png" type="Texture" id=48]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_006.png" type="Texture" id=49]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_000.png" type="Texture" id=50]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_011.png" type="Texture" id=51]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_008.png" type="Texture" id=52]
-[ext_resource path="res://imatges/wraith/Wraith_03/PNG Sequences/Attacking/Wraith_03_Attack_003.png" type="Texture" id=53]
+[ext_resource path="res://jugador/Evil Wizard/Sprites/Idle.png" type="Texture" id=2]
+[ext_resource path="res://jugador/Evil Wizard/Sprites/Death.png" type="Texture" id=3]
+[ext_resource path="res://jugador/Evil Wizard/Sprites/Move.png" type="Texture" id=4]
+[ext_resource path="res://jugador/Evil Wizard/Sprites/Attack.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.0971, 25.9216 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 150, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 300, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 450, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 600, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 150, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 300, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 450, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 600, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 750, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 900, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1050, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 150, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 300, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 450, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 600, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 750, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 900, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1050, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 171, 150 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 150, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 300, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 450, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 600, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 750, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 900, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1050, 0, 150, 150 )
+
+[sub_resource type="SpriteFrames" id=31]
 animations = [ {
-"frames": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 14 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 31 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
-"name": "caminar",
-"speed": 12.0
+"name": "mort",
+"speed": 5.0
 }, {
-"frames": [ ExtResource( 50 ), ExtResource( 42 ), ExtResource( 47 ), ExtResource( 53 ), ExtResource( 48 ), ExtResource( 44 ), ExtResource( 49 ), ExtResource( 45 ), ExtResource( 52 ), ExtResource( 43 ), ExtResource( 46 ), ExtResource( 51 ) ],
-"loop": true,
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": false,
 "name": "atacar",
-"speed": 8.0
+"speed": 1.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 7 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 32 ), ExtResource( 3 ), ExtResource( 25 ), ExtResource( 33 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 2 ) ],
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
 "loop": true,
 "name": "quiet",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 18 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 34 ), ExtResource( 39 ), ExtResource( 35 ), ExtResource( 38 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 40 ) ],
+"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
 "loop": true,
-"name": "mort",
-"speed": 5.0
+"name": "caminar",
+"speed": 4.0
 } ]
 
 [node name="personatge" type="KinematicBody2D"]
-position = Vector2( -3.0676, 1.65178 )
+position = Vector2( -5.0676, -1.09822 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 6.99377, -13.2517 )
@@ -92,12 +187,11 @@ scale = Vector2( 2.93, 1.8 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 12.2002, -5.52928 )
-scale = Vector2( 0.3, 0.3 )
-frames = SubResource( 2 )
+position = Vector2( 9.482, -9.78366 )
+scale = Vector2( 1.4, 1.4 )
+frames = SubResource( 31 )
 animation = "quiet"
-frame = 10
-speed_scale = 2.0
+frame = 7
 playing = true
 
 [node name="Position2D" type="Position2D" parent="."]

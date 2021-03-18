@@ -1,7 +1,7 @@
 extends KinematicBody2D
 var moviment = Vector2(0,0)
 const gravetat = 50
-const velocitat = 425
+const velocitat = 260
 const ATAC=preload("res://ATAC.tscn")
 var pot_disparar = true
 var cooldown=1
@@ -31,7 +31,7 @@ func _physics_process(_delta):
 		$AnimatedSprite.play('quiet')
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_up"):
-			moviment.y = -1000
+			moviment.y = -750
 	moviment=move_and_slide(moviment, Vector2.UP)
 	if Input.is_action_just_pressed('atacar') && pot_disparar:
 		var bola = ATAC.instance()
