@@ -46,14 +46,12 @@ func _physics_process(_delta):
 			bola.global_position=$Position2D.global_position
 			pot_disparar = false
 			timer.start()
+		
 func cooldown0():
 	pot_disparar=true
 func mortj():
 	mort = true
 	moviment.x=0
+	moviment.y+=gravetat
 	$AnimatedSprite.play('mort')
-	
-
-
-	
 
