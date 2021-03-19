@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://jugador/ATAC.gd" type="Script" id=1]
+[ext_resource path="res://jugador/jugador_sprites/FB002.png" type="Texture" id=2]
+[ext_resource path="res://jugador/jugador_sprites/FB003.png" type="Texture" id=3]
+[ext_resource path="res://jugador/jugador_sprites/FB005.png" type="Texture" id=4]
+[ext_resource path="res://jugador/jugador_sprites/FB004.png" type="Texture" id=5]
+[ext_resource path="res://jugador/jugador_sprites/FB001.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "atac",
+"speed": 20.0
+} ]
+
+[node name="atac" type="Area2D"]
+scale = Vector2( 0.8, 0.8 )
+collision_layer = 8
+collision_mask = 6
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -51.4158, -2.20557 )
+polygon = PoolVector2Array( 50.9772, -8.33002, 44.1412, -7.20629, 40.3954, -5.70798, 36.6496, -3.27323, 37.9606, -0.557553, 40.3954, 3.84373, 44.1412, 9.55602, 50.0407, 10.2115, 54.3484, 10.2115, 60.4352, 8.43229, 62.4018, 4.87381, 62.9636, 0.378891, 61.4653, -3.27323, 59.967, -7.48722, 56.9704, -8.23637 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.703373, -0.377459 )
+scale = Vector2( 1.61872, 1.51265 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -6.07831, -0.942341 )
+scale = Vector2( 0.818832, 0.953547 )
+frames = SubResource( 1 )
+animation = "atac"
+frame = 2
+playing = true
+[connection signal="area_entered" from="." to="." method="_on_atac_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_atac_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
