@@ -44,13 +44,18 @@ func _physics_process(delta):
 func _on_Timer_timeout():#per mort
 	queue_free() # Replace with function body.
 func _on_Area2D_body_entered(body):
-	if body.has_method('mortj'):
-		body.hp-=mal
-		atac=true
-		if body.hp<=0:
-			body.mortj()
-	else:
-		atac=false
+	if mort ==false:
+		if body.has_method('mortj'):
+			body.hp-=mal
+			atac=true
+			if body.hp<=0:
+				body.mortj()
+			if $Area2D.overlaps_body(body):
+				if body.has_method('mortj'):
+					atac=false
+					atac=true
+			else:
+				atac=false
 func _on_AnimatedSprite_animation_finished():
 	atac=false
 	

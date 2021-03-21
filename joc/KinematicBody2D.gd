@@ -18,13 +18,13 @@ func _physics_process(_delta):
 	if mort == false:
 		moviment.x=0
 		moviment.y += gravetat
-		if Input.is_action_pressed("ui_right"):
+		if Input.is_action_pressed("endavant"):
 			moviment.x = velocitat
 			$AnimatedSprite.flip_h = false
 			$AnimatedSprite.play('caminar')
 			if sign($Position2D.position.x) == -1:
 				$Position2D.position.x *= -1
-		elif Input.is_action_pressed("ui_left"):
+		elif Input.is_action_pressed("endarrere"):
 			moviment.x = -velocitat
 			$AnimatedSprite.flip_h = true
 			$AnimatedSprite.play('caminar')
@@ -33,7 +33,7 @@ func _physics_process(_delta):
 		else:
 			$AnimatedSprite.play('quiet')
 		if is_on_floor():
-			if Input.is_action_just_pressed("ui_up"):
+			if Input.is_action_just_pressed("salta"):
 				moviment.y = -750
 		moviment=move_and_slide(moviment, Vector2.UP)
 		if Input.is_action_just_pressed('atacar') && pot_disparar:
