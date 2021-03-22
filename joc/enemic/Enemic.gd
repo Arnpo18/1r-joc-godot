@@ -24,15 +24,22 @@ func moure():
 	moviment=move_and_slide(moviment,Vector2.UP)
 	if direccio == 1:
 			$AnimatedSprite.flip_h=false
+			$Area2D/esquerra.set_deferred('disabled', true)
+			$Area2D/dreta.set_deferred('disabled', false)
 	else:
 		$AnimatedSprite.flip_h=true
+		$Area2D/esquerra.set_deferred('disabled', false)
+		$Area2D/dreta.set_deferred('disabled', true)
 	if is_on_wall():
 		direccio=direccio*-1
 		$RayCast2D.position.x *= -1
+		
 	if $RayCast2D.is_colliding()==false:
 		direccio*=-1
 		$RayCast2D.position.x *= -1
 		$Area2D.position.x*=-1
+		
+		
 func _physics_process(delta):
 	if mort==false:
 		if atac==true:
@@ -50,12 +57,7 @@ func _on_Area2D_body_entered(body):
 			atac=true
 			if body.hp<=0:
 				body.mortj()
-			if $Area2D.overlaps_body(body):
-				if body.has_method('mortj'):
-					atac=false
-					atac=true
-			else:
-				atac=false
+			
 func _on_AnimatedSprite_animation_finished():
 	atac=false
 	
