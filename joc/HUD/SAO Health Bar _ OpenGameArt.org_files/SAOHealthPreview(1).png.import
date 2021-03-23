@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/surt2.png-5b145b5e8706203a9828ec40dcbb585f.stex"
+path="res://.import/SAOHealthPreview(1).png-8b9a6af1f3a2a280e258f8328cb2ff32.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://surt2.png"
-dest_files=[ "res://.import/surt2.png-5b145b5e8706203a9828ec40dcbb585f.stex" ]
+source_file="res://HUD/SAO Health Bar _ OpenGameArt.org_files/SAOHealthPreview(1).png"
+dest_files=[ "res://.import/SAOHealthPreview(1).png-8b9a6af1f3a2a280e258f8328cb2ff32.stex" ]
 
 [params]
 

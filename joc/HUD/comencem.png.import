@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/controls.png-a336a4436fe8f96ea213fef1ae1957e6.stex"
+path="res://.import/comencem.png-456aee65ee980a3ccb539165f463a963.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://controls.png"
-dest_files=[ "res://.import/controls.png-a336a4436fe8f96ea213fef1ae1957e6.stex" ]
+source_file="res://HUD/comencem.png"
+dest_files=[ "res://.import/comencem.png-456aee65ee980a3ccb539165f463a963.stex" ]
 
 [params]
 

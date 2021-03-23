@@ -7,7 +7,8 @@ var direccio=1
 var mort = false
 var hp = 100
 var atac = false
-var mal=50
+var mal=40
+var objectiu
 func mort():
 	mort=true
 	moviment=Vector2(0,0)
@@ -15,7 +16,9 @@ func mort():
 	$Timer.start()
 func atacar():
 	$AnimatedSprite.play('atac')
-	$Timer2.start()
+	objectiu.hp-=mal
+	if objectiu.hp <1:
+		objectiu.mortj()
 	
 func moure():
 	moviment.x=velocitat*direccio
@@ -39,27 +42,22 @@ func moure():
 		$RayCast2D.position.x *= -1
 		$Area2D.position.x*=-1
 		
-		
 func _physics_process(delta):
 	if mort==false:
 		if atac==true:
 			atacar()
+			$Timer3.start()
 		if atac==false:
 			moure()
-		moviment.y+=gravetat 
-		
+		moviment.y+=gravetat 	
 func _on_Timer_timeout():#per mort
 	queue_free() # Replace with function body.
 func _on_Area2D_body_entered(body):
 	if mort ==false:
 		if body.has_method('mortj'):
-			body.hp-=mal
 			atac=true
-			if body.hp<=0:
-				body.mortj()
-			
-func _on_AnimatedSprite_animation_finished():
-	atac=false
+			objectiu=body
+func _on_Area2D_body_exited(body):
+	atac=false 
 	
-	
-
+	 

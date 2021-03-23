@@ -7,7 +7,7 @@ var pot_disparar = true
 var cooldown=1
 var timer
 var mort = false
-export var hp = 200
+export var hp = 15000
 func _ready():
 	timer=Timer.new()
 	add_child(timer)
@@ -15,6 +15,7 @@ func _ready():
 	timer.set_wait_time(cooldown)
 	timer.connect('timeout',self,'cooldown0')
 func _physics_process(_delta):
+	$TextureProgress.value=hp
 	if mort == false:
 		moviment.x=0
 		moviment.y += gravetat
@@ -54,4 +55,9 @@ func mortj():
 	moviment.x=0
 	moviment.y+=gravetat
 	$AnimatedSprite.play('mort')
-
+var i=0
+func oof():
+	while i <= 5:
+		$Timer.start()
+func _on_Timer_timeout():
+	position.x+=10 # Replace with function body.

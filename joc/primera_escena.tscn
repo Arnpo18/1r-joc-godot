@@ -23,7 +23,7 @@ position = Vector2( 3104, -32 )
 scale = Vector2( 0.1, 0.1 )
 
 [node name="clau2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4352, 112 )
+position = Vector2( 4368, 96 )
 scale = Vector2( 0.1, 0.1 )
 
 [node name="clau3" parent="." instance=ExtResource( 3 )]

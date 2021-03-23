@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/885aaa030efc9ed87a6d5347f8df1772.png-776eb39800b0de5d9f81cf7e57c8c8f5.stex"
+path="res://.import/vidabuit.png-0f66b430eae27381be0aed5d4522a29a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://885aaa030efc9ed87a6d5347f8df1772.png"
-dest_files=[ "res://.import/885aaa030efc9ed87a6d5347f8df1772.png-776eb39800b0de5d9f81cf7e57c8c8f5.stex" ]
+source_file="res://HUD/vidabuit.png"
+dest_files=[ "res://.import/vidabuit.png-0f66b430eae27381be0aed5d4522a29a.stex" ]
 
 [params]
 

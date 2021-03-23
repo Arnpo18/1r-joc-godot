@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gdb-keyboard-1a.png-e7d9b388c8522599fb83ec206cefafe5.stex"
+path="res://.import/comencem2.png-a2edd5def594ecd17f196cd26e07420d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gdb-keyboard-1a.png"
-dest_files=[ "res://.import/gdb-keyboard-1a.png-e7d9b388c8522599fb83ec206cefafe5.stex" ]
+source_file="res://HUD/comencem2.png"
+dest_files=[ "res://.import/comencem2.png-a2edd5def594ecd17f196cd26e07420d.stex" ]
 
 [params]
 

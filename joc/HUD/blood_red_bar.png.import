@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/comencem2.png-536e8b556ff23c487d09249164db0148.stex"
+path="res://.import/blood_red_bar.png-657393e574de03b89fbd0e7821a1a8c0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://comencem2.png"
-dest_files=[ "res://.import/comencem2.png-536e8b556ff23c487d09249164db0148.stex" ]
+source_file="res://HUD/blood_red_bar.png"
+dest_files=[ "res://.import/blood_red_bar.png-657393e574de03b89fbd0e7821a1a8c0.stex" ]
 
 [params]
 
