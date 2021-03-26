@@ -13,6 +13,20 @@
 
 [node name="Node2D" type="Node2D"]
 
+[node name="porta" type="Area2D" parent="."]
+position = Vector2( 0, -1 )
+collision_layer = 131072
+collision_mask = 262144
+
+[node name="49470a8ac53138b1e9a20e71ebbd1a17-removebg-preview" type="Sprite" parent="porta"]
+show_behind_parent = true
+position = Vector2( 7264, -304 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="porta"]
+polygon = PoolVector2Array( 7232, -256, 7232, -328, 7232, -336, 7232, -344, 7240, -344, 7240, -352, 7248, -352, 7288, -352, 7288, -344, 7296, -344, 7296, -336, 7304, -336, 7304, -256 )
+
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( -376, -40 )
 collision_layer = 2
@@ -21,14 +35,17 @@ collision_mask = 15
 [node name="clau" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3104, -32 )
 scale = Vector2( 0.1, 0.1 )
+script = null
 
 [node name="clau2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4368, 96 )
 scale = Vector2( 0.1, 0.1 )
+script = null
 
 [node name="clau3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6464, -152 )
 scale = Vector2( 0.1, 0.1 )
+script = null
 
 [node name="personatge" parent="." instance=ExtResource( 1 )]
 position = Vector2( 192, -32 )
@@ -122,9 +139,3 @@ scale = Vector2( 81.5607, 26.5863 )
 texture = ExtResource( 7 )
 region_enabled = true
 region_rect = Rect2( 193.527, 271.868, 118.489, 35.8486 )
-
-[node name="49470a8ac53138b1e9a20e71ebbd1a17-removebg-preview" type="Sprite" parent="."]
-show_behind_parent = true
-position = Vector2( 7264, -304 )
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 11 )

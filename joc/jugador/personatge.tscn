@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://jugador/jugador_sprites/Evil Wizard/Sprites/Idle.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://jugador/jugador_sprites/Evil Wizard/Sprites/Move.png" type="Texture" id=4]
 [ext_resource path="res://jugador/jugador_sprites/Evil Wizard/Sprites/Attack.png" type="Texture" id=5]
 [ext_resource path="res://HUD/blood_red_bar.png" type="Texture" id=6]
+[ext_resource path="res://gold-key-drawing-removebg-preview.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.53455, 23.7491 )
@@ -178,6 +179,9 @@ animations = [ {
 "speed": 1.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 26.1161, 42.9646 )
+
 [node name="personatge" type="KinematicBody2D"]
 position = Vector2( -296, 40 )
 script = ExtResource( 1 )
@@ -194,7 +198,7 @@ position = Vector2( 8.00001, -8 )
 scale = Vector2( 1.4, 1.4 )
 frames = SubResource( 31 )
 animation = "quiet"
-frame = 1
+frame = 5
 playing = true
 
 [node name="Position2D" type="Position2D" parent="."]
@@ -205,8 +209,7 @@ __meta__ = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.75, 0.75 )
-limit_right = 7800
+zoom = Vector2( 0.84, 0.84 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
@@ -224,4 +227,40 @@ texture_progress = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Area_claus" type="Area2D" parent="."]
+collision_layer = 32768
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_claus"]
+position = Vector2( 7.2063, -14.0158 )
+shape = SubResource( 32 )
+
+[node name="clau" type="Sprite" parent="."]
+visible = false
+position = Vector2( -880, -448 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[node name="clau2" type="Sprite" parent="."]
+visible = false
+position = Vector2( -816, -448 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[node name="clau3" type="Sprite" parent="."]
+visible = false
+position = Vector2( -752, -448 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[node name="area_porta" type="Area2D" parent="."]
+collision_layer = 262144
+collision_mask = 131072
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_porta"]
+polygon = PoolVector2Array( -16, -56, -16, 32, 32, 32, 32, -64 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="area_entered" from="Area_claus" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Area_claus" to="." method="_on_Area_claus_area_entered"]
+[connection signal="area_entered" from="area_porta" to="." method="_on_area_porta_area_entered"]

@@ -8,6 +8,7 @@ var cooldown=1
 var timer
 var mort = false
 export var hp = 15000
+export var claus=0
 func _ready():
 	timer=Timer.new()
 	add_child(timer)
@@ -47,7 +48,12 @@ func _physics_process(_delta):
 			bola.global_position=$Position2D.global_position
 			pot_disparar = false
 			timer.start()
-		
+		if claus ==1:
+			$clau.visible=true
+		if claus==2:
+			$clau2.visible=true
+		if claus==3:
+			$clau3.visible=true
 func cooldown0():
 	pot_disparar=true
 func mortj():
@@ -61,3 +67,16 @@ func oof():
 		$Timer.start()
 func _on_Timer_timeout():
 	position.x+=10 # Replace with function body.
+
+
+
+	 # Replace with function body.
+
+
+func _on_Area_claus_area_entered(area):
+	claus+=1
+	area.queue_free() # Replace with function body.
+
+
+func _on_area_porta_area_entered(area):
+	get_tree().change_scene("res://boss_final_escena.tscn")

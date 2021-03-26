@@ -173,6 +173,11 @@
 [node name="Pantalla d\'inici" type="Node"]
 script = ExtResource( 7 )
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 0, 428, 497, 428, 508, 416, 520, 428, 608, 492, 620, 480, 627.01, 492.731, 712, 496, 800, 556, 1085.03, 556, 1092, 548, 1097.64, 556, 1548, 556, 1556, 556, 1572, 556, 1660, 488, 1948, 492, 1944, 332, 2096, 804, -12, 828, -32, 224 )
+
 [node name="cloudySky_640x360px4" type="Sprite" parent="."]
 position = Vector2( 1899.63, 815.007 )
 scale = Vector2( 9.87722, 7.37194 )
@@ -280,10 +285,5 @@ texture_normal = ExtResource( 1 )
 texture_focused = ExtResource( 3 )
 expand = true
 stretch_mode = 3
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 0, 428, 497, 428, 508, 416, 520, 428, 608, 492, 620, 480, 627.01, 492.731, 712, 496, 800, 556, 1085.03, 556, 1092, 548, 1097.64, 556, 1548, 556, 1556, 556, 1572, 556, 1660, 488, 1948, 492, 1944, 332, 2096, 804, -12, 828, -32, 224 )
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/TextureButton3" to="." method="_on_TextureButton3_pressed"]
