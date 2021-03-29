@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ambient/DarkVaniaAssets_0.9_by_Federico_Calchera/background/par1_tileable_640x360px.png" type="Texture" id=1]
+[ext_resource path="res://ambient/DarkVaniaAssets_0.9_by_Federico_Calchera/background/par2_tileable_640x360px.png" type="Texture" id=2]
+[ext_resource path="res://ambient/DarkVaniaAssets_0.9_by_Federico_Calchera/background/cloudySky_640x360px.png" type="Texture" id=3]
+[ext_resource path="res://ambient/DarkVaniaAssets_0.9_by_Federico_Calchera/background/par3_tileable_640x360px.png" type="Texture" id=4]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_base_scale = Vector2( 0.7, 0.7 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.1, 0 )
+
+[node name="cloudySky_640x360px" type="Sprite" parent="ParallaxLayer"]
+position = Vector2( 3136, -152 )
+scale = Vector2( 2.99468, 1.97255 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 3195.13, 358.885 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.23, 0 )
+
+[node name="cloudySky_640x360px" type="Sprite" parent="ParallaxLayer2"]
+position = Vector2( 3136, -150.914 )
+scale = Vector2( 2.99468, 1.97255 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 3195.13, 358.885 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.39, 0 )
+
+[node name="cloudySky_640x360px" type="Sprite" parent="ParallaxLayer3"]
+position = Vector2( 3136, -150.914 )
+scale = Vector2( 2.99468, 1.97255 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 3195.13, 358.885 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.62, 0 )
+
+[node name="cloudySky_640x360px" type="Sprite" parent="ParallaxLayer4"]
+position = Vector2( 3132, -150.914 )
+scale = Vector2( 2.99218, 1.97255 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 3195.13, 358.885 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.68, 0 )
+
+[node name="cloudySky_640x360px" type="Sprite" parent="ParallaxLayer5"]
+position = Vector2( 3155.92, 670.74 )
+scale = Vector2( 81.5607, 26.5863 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 193.527, 271.868, 118.489, 35.8486 )

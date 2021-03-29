@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://macarrons-bacalla.jpg" type="Texture" id=1]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -451.991, -280.618, -450.103, 285.706, 454.129, 281.931, 448.466, -284.394 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )

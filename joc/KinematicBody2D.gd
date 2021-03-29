@@ -37,6 +37,11 @@ func _physics_process(_delta):
 		if is_on_floor():
 			if Input.is_action_just_pressed("salta"):
 				moviment.y = -750
+		if moviment.y > 0 and is_on_floor()==false:
+			$AnimatedSprite.play('cau')
+		if moviment.y < 0 and is_on_floor()==false:
+			$AnimatedSprite.play('salt')
+			
 		moviment=move_and_slide(moviment, Vector2.UP)
 		if Input.is_action_just_pressed('atacar') && pot_disparar:
 			var bola = ATAC.instance()
@@ -54,6 +59,8 @@ func _physics_process(_delta):
 			$clau2.visible=true
 		if claus==3:
 			$clau3.visible=true
+		if mort==true:
+			$timer_mort.start()
 func cooldown0():
 	pot_disparar=true
 func mortj():
@@ -61,6 +68,7 @@ func mortj():
 	moviment.x=0
 	moviment.y+=gravetat
 	$AnimatedSprite.play('mort')
+	
 var i=0
 func oof():
 	while i <= 5:
@@ -68,15 +76,13 @@ func oof():
 func _on_Timer_timeout():
 	position.x+=10 # Replace with function body.
 
-
-
-	 # Replace with function body.
-
-
 func _on_Area_claus_area_entered(area):
 	claus+=1
 	area.queue_free() # Replace with function body.
 
-
 func _on_area_porta_area_entered(area):
 	get_tree().change_scene("res://boss_final_escena.tscn")
+
+func _on_timer_mort_timeout():
+	get_tree().change_scene("res://Pantalla d'inici.tscn") # Replace with function body.
+	queue_free()
