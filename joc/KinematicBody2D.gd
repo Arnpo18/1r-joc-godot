@@ -68,7 +68,7 @@ func mortj():
 	moviment.x=0
 	moviment.y+=gravetat
 	$AnimatedSprite.play('mort')
-	
+	$timer_mort.start()
 var i=0
 func oof():
 	while i <= 5:
