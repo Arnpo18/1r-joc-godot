@@ -10,6 +10,7 @@ var atac = false
 var mal=40
 var objectiu
 var colera=false
+const macarrons = preload("res://macarrons.tscn")
 func mort():
 	mort=true
 	moviment=Vector2(0,0)
@@ -39,12 +40,7 @@ func moure():
 		$comp_esquerra/CollisionPolygon2D.set_deferred('disabled',false)
 	if is_on_wall():
 		direccio=direccio*-1
-		$RayCast2D.position.x *= -1
 		
-	if $RayCast2D.is_colliding()==false:
-		direccio*=-1
-		$RayCast2D.position.x *= -1
-		$Area2D.position.x*=-1
 func _physics_process(delta):
 	if mort==false:
 		if atac==true:
@@ -52,11 +48,15 @@ func _physics_process(delta):
 			$Timer3.start()
 		if atac==false:
 			moure()
-		
+	
 		moviment.y+=gravetat 	
 	$TextureProgress.value=hp
 func _on_Timer_timeout():#per mort
-	queue_free() # Replace with function body.
+	$CollisionShape2D.set_deferred('disabled', true)
+	$Area2D.set_deferred('disabled',true)
+	$Area2D2.set_deferred('disabled',true)
+	var mac = macarrons.instance()
+	get_parent().add_child(mac) # Replace with function body.
 func _on_Area2D_body_entered(body):
 	if mort ==false:
 		if body.has_method('mortj'):
@@ -75,11 +75,11 @@ func _on_Area2D2_body_exited(body):
 	atac=false # Replace with function body.
 func _on_comp_dreta_area_entered(area):
 	 direccio=direccio*-1
-	 $RayCast2D.position.x *= -1# Replace with function body.
+	 
 	 colera=true
 func _on_comp_esquerra_area_entered(area):
 	direccio=direccio*-1
-	$RayCast2D.position.x *= -1 # Replace with function body.
+	
 	colera=true
 
 	colera=false # Replace with function body.

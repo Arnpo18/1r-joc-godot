@@ -7,7 +7,7 @@ var pot_disparar = true
 var cooldown=1
 var timer
 var mort = false
-export var hp = 15000
+export var hp = 11000
 export var claus=0
 func _ready():
 	timer=Timer.new()
