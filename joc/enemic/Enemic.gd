@@ -58,10 +58,12 @@ func _on_Area2D_body_entered(body):
 			if body.hp > 0:
 				atac=true
 				objectiu=body
-			else:
+			if body.hp <= 0:
 				atac=false
+		
 			
 func _on_Area2D_body_exited(body):
 	atac=false 
 	
 	 
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://jugador/ATAC.gd" type="Script" id=1]
 [ext_resource path="res://jugador/Iceball_84x9.png" type="Texture" id=2]
@@ -303,7 +303,7 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 756, 45, 84, 9 )
 
-[sub_resource type="SpriteFrames" id=71]
+[sub_resource type="SpriteFrames" id=61]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ) ],
 "loop": true,
@@ -311,17 +311,17 @@ animations = [ {
 "speed": 20.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=62]
+extents = Vector2( 10, 4.45026 )
+
 [node name="atac" type="Area2D"]
+position = Vector2( 1.11362, -0.668175 )
 collision_layer = 8
 collision_mask = 6
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( -51.4158, -2.20557 )
-polygon = PoolVector2Array( 51.3348, -4.03451, 46.7063, 0.0719717, 47.4719, 3.41284, 49.0379, 7.34532, 54.8148, 7.38013, 60.0698, 6.0229, 63.1322, 5.57049, 81.9246, 3.41284, 69.7096, -0.484841, 63.4106, -0.589243, 56.6593, -1.77247 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 visible = false
@@ -331,10 +331,14 @@ scale = Vector2( 1.61872, 1.51265 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 30, 0 )
 scale = Vector2( 0.818832, 0.953547 )
-frames = SubResource( 71 )
+frames = SubResource( 61 )
 animation = "atac"
-frame = 50
+frame = 45
 playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 10.9135, 0 )
+shape = SubResource( 62 )
 [connection signal="area_entered" from="." to="." method="_on_atac_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_atac_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

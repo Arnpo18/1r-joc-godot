@@ -59,8 +59,9 @@ func _physics_process(_delta):
 			$clau2.visible=true
 		if claus==3:
 			$clau3.visible=true
-		if mort==true:
-			$timer_mort.start()
+		
+		if $TextureProgress.value<=0:
+			$timer_mort.start(2)
 func cooldown0():
 	pot_disparar=true
 func mortj():
@@ -68,7 +69,8 @@ func mortj():
 	moviment.x=0
 	moviment.y+=gravetat
 	$AnimatedSprite.play('mort')
-	$timer_mort.start()
+	$Timer2.start(2)
+
 var i=0
 func oof():
 	while i <= 5:
@@ -83,6 +85,5 @@ func _on_Area_claus_area_entered(area):
 func _on_area_porta_area_entered(area):
 	get_tree().change_scene("res://boss_final_escena.tscn")
 
-func _on_timer_mort_timeout():
+func _on_Timer2_timeout():
 	get_tree().change_scene("res://Pantalla d'inici.tscn") # Replace with function body.
-	queue_free()
